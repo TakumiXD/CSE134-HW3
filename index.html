@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+
+    <title>Takumi's Portfolio Site</title>
+  </head>
+  <body>
+    <header>
+      <h1>Takumi</h1>
+      <nav>
+        <ul>
+          <li><a href="about">About</a></li>
+          <li><a href="portfolio">Projects</a></li>
+          <li><a href="resume">Resume</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <div>
+          <h3>Takumi Sugita</h3>
+          <picture>
+            <source srcset="/assets/fake_persona.webp" media="(min-width: 1024px)" type="images/webp" />
+            <source srcset="/assets/fake_persona.jpg" media="(min-width:1024px)" type="images/jpg" />
+            <source srcset="/assets/fake_persona_md.webp" media="(min-width: 512px)" type="images/webp" />
+            <source srcset="/assets/fake_persona_md.jpg" media="(min-width: 512px)" type="images/jpg" />
+            <img src="/assets/fake_persona_sm.jpg" alt="A Picture of Me!"/>
+          </picture>
+          <h4>Bio</h4>
+            <p>I am a 4th year undergraduate student at UC San Diego studying Mathematics Computer Science.</p>
+          <h4>Demographics</h4>
+          <ul>
+            <li><strong>Age:</strong> 21</li>
+            <li><strong>Ethnicity:</strong> Japanese</li>
+            <li><strong>Born:</strong> Chiba, Japan</li>
+            <li><strong>Raised:</strong> SoCal</li>
+          </ul>
+          <h4>Hobbies</h4>
+          <ul>
+            <li>Working out</li>
+            <li>
+              <details>
+                <summary>Watching Sports</summary>
+                <table>
+                  <caption>My favorite sports, teams, and players</caption>
+                  <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <tr>
+                    <th>Sport</th>
+                    <th>Team</th>
+                    <th>Player</th>
+                  </tr>
+                  <tr>
+                    <td>Soccer</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>Heung Min Son</td>
+                  </tr>
+                  <tr>
+                    <td>Soccer</td>
+                    <td>Arsenal</td>
+                    <td>Takehiro Tomiyasu</td>
+                  </tr>
+                  <tr>
+                    <td>Basketball</td>
+                    <td>Lakers</td>
+                    <td>Rui Hachimura</td>
+                  </tr>
+                  <tr>
+                    <td>Baseball</td>
+                    <td>Angels</td>
+                    <td>Shohei Ohtani</td>
+                  </tr>
+                </table>
+              </details>
+            </li>
+            <li>
+              Watching Anime
+              <aside><p>I guess I also <i>kind of</i> like Netflix</p></aside>
+            </li>
+            <li>
+              <details>
+                <summary>Clash of Clans</summary>
+                <figure>
+                  <img src="/assets/clash_of_clans.jpg" alt="Image of my Clash of Clans Base">
+                  <figcaption>My Clash of Clans Base</figcaption>
+                </figure>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Playing with my dog</summary>
+                <video controls>
+                  <source src="/assets/dog_playing.mp4" type="video/mp4"/>
+                </video>
+              </details>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <ol>
+          <li>
+            <h3>Random Personal Project</h3>
+            <p>This is where my description for my projects would go. I am sorry that there is no real information here I just want to get all the tags for HW1 first.</p>
+          </li>
+          <li>
+            <h3>Not so random Personal Project</h3>
+            <p>Again I am sorry</p>
+          </li>
+          <li>
+            <h3>Random Certificate</h3>
+            <p>I have a certificate of getting through the first 3 weeks of CSE 134</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="resume">
+        <h2>Resume</h2>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf"><em>External Link:</em> My Resume</a>
+        <canvas id="custom-canvas" width="50" height="50" style="border:1px solid #000">
+          Your browser does not support the canvas tag
+        </canvas>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <h4>My Contact Info</h4>
+        <ul>
+          <li><strong>School Email:</strong> tsugita@ucsd.edu</li>
+          <li><strong>Personal Email:</strong> tsugita2600@gmail.com</li>
+        </ul>
+        <form>
+          <fieldset>
+            <legend>or fill out this form</legend>
+            <label for="contact-status">Select your status: </label>
+            <datalist id="contact-statuses">
+              <option>Recruiter</option>
+              <option>Student</option>
+              <option>Other</option>
+            </datalist>
+            <input list="contact-statuses" id="contact-status"/>
+            <br />
+            <label for="contact-method">Select your Preferred Contact Method:</label>
+            <select id="contact-method">
+              <optgroup label="Email">
+                <option value="work-email">Work-Email</option>
+                <option value="school-email">School Email</option>
+                <option value="personal-email">Personal Email</option>
+              </optgroup>
+              <optgroup label="Phone">
+                <option value="tel">Tel</option>
+                <option value="text">Text</option>
+              </optgroup>
+            </select>
+            <br />
+            <label for="additional-comment-area">Add any comments:</label>
+            <textarea id="additional-comment-area">Your comment here...</textarea>
+            <br />
+            <button type="submit">Submit</button>
+            <p>Click on the submit <code>button</code> above to submit</p>
+          </fieldset>
+        </form>
+      </section>
+
+      <section id="random">
+        <h2>Random</h2>
+        <iframe src="index.html" title="My Github"></iframe>
+        <br />
+        <button id="troll-face-btn">Do Not Click</button>
+        <br />
+        <template>
+          <p>Hidden text at bottom of page!!!</p>
+        </template>
+      </section>
+
+    </main>
+
+    <footer>
+      <hr />
+      <p>Made by <b>Takumi Sugita</b> for UCSD course <span style="color:red">CSE 134</span></p>
+      <pre>
+        Last Updated On
+           Some Date
+      </pre>
+    </footer>
+
+    <script>
+      document.getElementById('troll-face-btn').addEventListener('click', () => {
+        let temp = document.getElementsByTagName("template")[0];
+        let clone = temp.content.cloneNode(true);
+        document.body.appendChild(clone);
+      });
+    </script>
+  </body>
+</html>
