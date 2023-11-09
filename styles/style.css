@@ -1,0 +1,219 @@
+:root {
+  --primary-color: white, #ffffff;
+  --secondary-color: #add8e6;
+  --tertiary-color: #8ac5f3;
+  --text-color: black, #000000;
+  --box-shadow-color: rgba(0, 0, 0, 0.4);
+  --footer-background-color: black, #000000;
+  --footer-text-color: white, #ffffff;
+
+  --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1vw;
+  font-family: var(--font);
+}
+
+body {
+  background-color: var(--primary-color);
+  animation: slide-in 1s;
+}
+
+header {
+  background-color: var(--secondary-color);
+}
+
+.header-container, main, footer hr {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  padding: 0.5rem 0;
+  flex: 1;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+h4 {
+  font-size: 1.5vw;
+}
+
+h1 a {
+  font-size: 2.5vw;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1.5vw;
+}
+
+#nav-hamburger {
+  display: none;
+}
+
+h1 a:hover,
+nav ul li a:hover {
+  background-color: var(--tertiary-color);
+  transition: background-color 1s ease-in-out;
+}
+
+#about {
+  padding: 2rem 1rem;
+}
+
+#about .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "intro intro"
+    "persona bio"
+    "hobbies hobbies";
+  align-items: center;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+
+#about h3 {
+  grid-area: intro;
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 3vw;
+}
+
+.grid-container h3, .grid-container .bio-grid, .grid-container .hobbies-grid {
+  box-shadow: 0 4px 12px var(--box-shadow-color);
+}
+
+#about h4 {
+  padding-bottom: 0.25rem;
+}
+
+#about picture img {
+  grid-area: persona;
+  display: block;
+  max-width: 75%;
+  margin: 1em auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+#about .bio-grid {
+  grid-area: bio;
+  padding: 1rem;
+}
+
+#about .bio-grid p {
+  padding-bottom: 2rem;
+}
+
+table tr td:nth-child(2) {
+  padding-left: 1.5rem;
+}
+
+#about .hobbies-grid {
+  grid-area: hobbies;
+  padding: 1rem;
+}
+
+#about .hobbies-grid ul {
+  padding-left: 1rem;
+}
+
+#portfolio, #resume, #contact {
+  padding: 1rem;
+}
+
+#portfolio ol {
+  padding: 1rem 1.25rem;
+}
+
+#portfolio ol li {
+  margin-bottom: 1rem;
+}
+
+#resume h2, #contact h2 {
+  margin-bottom: 1rem;
+}
+
+#contact table {
+  margin-bottom: 1rem;
+}
+
+form .form-content {
+  padding: 1rem;
+}
+
+form label {
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+
+form textarea {
+  display: block;
+  width: 95%;
+  height: 4rem;
+  padding: 2.5%;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+footer p {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 512px) {
+  nav ul li{
+    display: block;
+
+  }
+
+  #nav-hamburger {
+    display: block;
+  }
+
+  .grid-container {
+    display: block !important;
+  }
+
+  #about picture img {
+    margin: 3rem auto;
+  }
+
+  #about .hobbies-grid {
+    margin-top: 2rem;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

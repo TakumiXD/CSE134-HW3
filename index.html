@@ -9,104 +9,73 @@
   </head>
   <body>
     <header>
-      <h1>Takumi</h1>
-      <svg>
-        <circle cx="40" cy="40" r="20" stroke="black" stroke-width="2" fill="green"/>
-      </svg>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Projects</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#random">Random</a></li>
-        </ul>
-      </nav>
+      <div class="header-container">
+        <h1><a href="#">Takumi Sugita</a></h1>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <svg id="nav-hamburger" viewBox="0 0 100 80" width="40" height="10">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+      </div>
+      <hr/>
     </header>
+
     <main>
       <section id="about">
         <h2>About</h2>
-        <div>
-          <h3>Takumi Sugita</h3>
+        <div class="grid-container">
+          <h3>Hi there! I'm Takumi.</h3>
           <picture>
-            <source srcset="/assets/fake_persona.webp" media="(min-width: 1024px)" type="images/webp" />
-            <source srcset="/assets/fake_persona.jpg" media="(min-width:1024px)" type="images/jpg" />
-            <source srcset="/assets/fake_persona_md.webp" media="(min-width: 512px)" type="images/webp" />
-            <source srcset="/assets/fake_persona_md.jpg" media="(min-width: 512px)" type="images/jpg" />
+            <source srcset="/assets/fake_persona.jpg" media="(min-width: 1024px)" type="image/jpg" />
+            <source srcset="/assets/fake_persona.webp" media="(min-width: 1024px)" type="image/webp" />
+            <source srcset="/assets/fake_persona_md.jpg" media="(min-width: 512px)" type="image/jpg" />
+            <source srcset="/assets/fake_persona_md.webp" media="(min-width: 512px)" type="image/webp" />
             <img src="/assets/fake_persona_sm.jpg" alt="A Picture of Me!"/>
           </picture>
-          <h4>Bio</h4>
-            <p>I am a 4th year undergraduate student at UC San Diego studying Mathematics Computer Science.</p>
-          <h4>Demographics</h4>
-          <ul>
-            <li><strong>Age:</strong> 21</li>
-            <li><strong>Ethnicity:</strong> Japanese</li>
-            <li><strong>Born:</strong> Chiba, Japan</li>
-            <li><strong>Raised:</strong> SoCal</li>
-          </ul>
-          <h4>Hobbies</h4>
-          <ul>
-            <li>Working out</li>
-            <li>
-              <details>
-                <summary>Watching Sports</summary>
-                <table>
-                  <caption>My favorite sports, teams, and players</caption>
-                  <colgroup>
-                    <col>
-                    <col>
-                    <col>
-                  </colgroup>
-                  <tr>
-                    <th>Sport</th>
-                    <th>Team</th>
-                    <th>Player</th>
-                  </tr>
-                  <tr>
-                    <td>Soccer</td>
-                    <td>Tottenham Hotspur</td>
-                    <td>Heung Min Son</td>
-                  </tr>
-                  <tr>
-                    <td>Soccer</td>
-                    <td>Arsenal</td>
-                    <td>Takehiro Tomiyasu</td>
-                  </tr>
-                  <tr>
-                    <td>Basketball</td>
-                    <td>Lakers</td>
-                    <td>Rui Hachimura</td>
-                  </tr>
-                  <tr>
-                    <td>Baseball</td>
-                    <td>Angels</td>
-                    <td>Shohei Ohtani</td>
-                  </tr>
-                </table>
-              </details>
-            </li>
-            <li>
-              Watching Anime
-              <aside><p>I guess I also <i>kind of</i> like Netflix</p></aside>
-            </li>
-            <li>
-              <details>
-                <summary>Clash of Clans</summary>
-                <figure>
-                  <img src="/assets/clash_of_clans.jpg" alt="Image of my Clash of Clans Base">
-                  <figcaption>My Clash of Clans Base</figcaption>
-                </figure>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Playing with my dog</summary>
-                <video controls>
-                  <source src="/assets/dog_playing.mp4" type="video/mp4"/>
-                </video>
-              </details>
-            </li>
-          </ul>
+          <div class="bio-grid">
+            <h4>BIO</h4>
+              <p>I am a 4th year undergraduate student at University of California San Diego studying Mathematics-Computer Science.</p>
+            <h4>DEMOGRAPHICS</h4>
+            <table>
+              <tr>
+                <td><b>Location</b></td>
+                <td>San Diego, California</td>
+              </tr>
+              <tr>
+                <td><b>Age</b></td>
+                <td>21</td>
+              </tr>
+              <tr>
+                <td><b>Ethnicity</b></td>
+                <td>Japanese</td>
+              </tr>
+              <tr>
+                <td><b>Born</b></td>
+                <td>Chiba, Japan</td>
+              </tr>
+              <tr>
+                <td><b>Raised</b></td>
+                <td>SoCal</td>
+              </tr>    
+            </table>
+          </div>
+          <div class="hobbies-grid">
+            <h4>HOBBIES</h4>
+            <ul>
+              <li>Working out</li>
+              <li>Watching Sports</li>
+              <li>Watching Anime</li>
+              <li>Clash of Clans</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -131,25 +100,36 @@
       <section id="resume">
         <h2>Resume</h2>
         <a href="https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf"><em>External Link:</em> My Resume</a>
-        <canvas id="custom-canvas" width="50" height="50" style="border:1px solid #000">
-          Your browser does not support the canvas tag
-        </canvas>
       </section>
 
       <section id="contact">
         <h2>Contact</h2>
-        <h4>My Contact Info</h4>
         <ul>
-          <li><strong>School Email:</strong> tsugita@ucsd.edu</li>
-          <li><strong>Personal Email:</strong> tsugita2600@gmail.com</li>
+          <table>
+            <tr>
+              <td><b>School Email</b></td>
+              <td>tsugita@ucsd.edu</td>
+            </tr>
+            <tr>
+              <td><b>Personal Email</b></td>
+              <td>tsugita2600@gmail.com</td>
+            </tr>
+            <tr>
+              <td><b>Tel / Text</b></td>
+              <td>(619) 630-9531</td>
+            </tr>
+          </table>
         </ul>
+
+        <h4>Or fill out the form below</h4>
         <form>
           <fieldset>
-            <legend>or fill out this form</legend>
+            <div class="form-content">
             <label for="contact-status">Select your status: </label>
             <datalist id="contact-statuses">
               <option>Recruiter</option>
               <option>Student</option>
+              <option>Developer</option>
               <option>Other</option>
             </datalist>
             <input list="contact-statuses" id="contact-status"/>
@@ -168,42 +148,19 @@
             </select>
             <br />
             <label for="additional-comment-area">Add any comments:</label>
-            <textarea id="additional-comment-area">Your comment here...</textarea>
+            <textarea id="additional-comment-area" placeholder="Your comment here..."></textarea>
             <br />
             <button type="submit">Submit</button>
-            <p>Click on the submit <code>button</code> above to submit</p>
+            </div>
           </fieldset>
         </form>
-      </section>
-
-      <section id="random">
-        <h2>Random</h2>
-        <iframe src="index.html" title="My Github"></iframe>
-        <br />
-        <button id="troll-face-btn">Do Not Click</button>
-        <br />
-        <template>
-          <p>Hidden text at bottom of page!!!</p>
-        </template>
       </section>
 
     </main>
 
     <footer>
-      <hr />
-      <p>Made by <b>Takumi Sugita</b> for UCSD course <span style="color:red">CSE 134</span></p>
-      <pre>
-        Last Updated On
-           Some Date
-      </pre>
+      <hr/>
+      <p>Made by Takumi Sugita for the UCSD course CSE 134</p>
     </footer>
-
-    <script>
-      document.getElementById('troll-face-btn').addEventListener('click', () => {
-        let temp = document.getElementsByTagName("template")[0];
-        let clone = temp.content.cloneNode(true);
-        document.body.appendChild(clone);
-      });
-    </script>
   </body>
 </html>
