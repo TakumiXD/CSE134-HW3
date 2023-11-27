@@ -13,10 +13,10 @@
         <h1><a href="#">Takumi Sugita</a></h1>
         <nav>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="./index.html" class="current">About</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./resume.html">Resume</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
         </nav>
         <svg id="nav-hamburger" viewBox="0 0 100 80" width="40" height="10">
@@ -28,134 +28,53 @@
       <hr/>
     </header>
 
-    <main>
-      <section id="about">
-        <h2>About</h2>
-        <div class="grid-container">
-          <h3>Hi there! I'm Takumi.</h3>
-          <picture>
-            <source srcset="/assets/fake_persona.jpg" media="(min-width: 1024px)" type="image/jpg" />
-            <source srcset="/assets/fake_persona.webp" media="(min-width: 1024px)" type="image/webp" />
-            <source srcset="/assets/fake_persona_md.jpg" media="(min-width: 512px)" type="image/jpg" />
-            <source srcset="/assets/fake_persona_md.webp" media="(min-width: 512px)" type="image/webp" />
-            <img src="/assets/fake_persona_sm.jpg" alt="A Picture of Me!"/>
-          </picture>
-          <div class="bio-grid">
-            <h4>BIO</h4>
-              <p>I am a 4th year undergraduate student at University of California San Diego studying Mathematics-Computer Science.</p>
-            <h4>DEMOGRAPHICS</h4>
-            <table>
-              <tr>
-                <td><b>Location</b></td>
-                <td>San Diego, California</td>
-              </tr>
-              <tr>
-                <td><b>Age</b></td>
-                <td>21</td>
-              </tr>
-              <tr>
-                <td><b>Ethnicity</b></td>
-                <td>Japanese</td>
-              </tr>
-              <tr>
-                <td><b>Born</b></td>
-                <td>Chiba, Japan</td>
-              </tr>
-              <tr>
-                <td><b>Raised</b></td>
-                <td>SoCal</td>
-              </tr>    
-            </table>
-          </div>
-          <div class="hobbies-grid">
-            <h4>HOBBIES</h4>
-            <ul>
-              <li>Working out</li>
-              <li>Watching Sports</li>
-              <li>Watching Anime</li>
-              <li>Clash of Clans</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="portfolio">
-        <h2>Portfolio</h2>
-        <ol>
-          <li>
-            <h3>Random Personal Project</h3>
-            <p>This is where my description for my projects would go. I am sorry that there is no real information here I just want to get all the tags for HW1 first.</p>
-          </li>
-          <li>
-            <h3>Not so random Personal Project</h3>
-            <p>Again I am sorry</p>
-          </li>
-          <li>
-            <h3>Random Certificate</h3>
-            <p>I have a certificate of getting through the first 3 weeks of CSE 134</p>
-          </li>
-        </ol>
-      </section>
-
-      <section id="resume">
-        <h2>Resume</h2>
-        <a href="https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf"><em>External Link:</em> My Resume</a>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <ul>
+    <main id="about">
+      <div class="grid-container">
+        <h2>Hi there! I'm Takumi.</h2>
+        <picture>
+          <source srcset="/assets/fake_persona.jpg" media="(min-width: 1024px)" type="image/jpg" />
+          <source srcset="/assets/fake_persona.webp" media="(min-width: 1024px)" type="image/webp" />
+          <source srcset="/assets/fake_persona_md.jpg" media="(min-width: 512px)" type="image/jpg" />
+          <source srcset="/assets/fake_persona_md.webp" media="(min-width: 512px)" type="image/webp" />
+          <img src="/assets/fake_persona_sm.jpg" alt="A Picture of Me!"/>
+        </picture>
+        <div class="bio-grid">
+          <h4>BIO</h4>
+            <p>I am a 4th year undergraduate student at University of California San Diego studying Mathematics-Computer Science.</p>
+          <h4>DEMOGRAPHICS</h4>
           <table>
             <tr>
-              <td><b>School Email</b></td>
-              <td>tsugita@ucsd.edu</td>
+              <td><b>Location</b></td>
+              <td>San Diego, California</td>
             </tr>
             <tr>
-              <td><b>Personal Email</b></td>
-              <td>tsugita2600@gmail.com</td>
+              <td><b>Age</b></td>
+              <td>21</td>
             </tr>
             <tr>
-              <td><b>Tel / Text</b></td>
-              <td>(619) 630-9531</td>
+              <td><b>Ethnicity</b></td>
+              <td>Japanese</td>
             </tr>
+            <tr>
+              <td><b>Born</b></td>
+              <td>Chiba, Japan</td>
+            </tr>
+            <tr>
+              <td><b>Raised</b></td>
+              <td>SoCal</td>
+            </tr>    
           </table>
-        </ul>
-
-        <h4>Or fill out the form below</h4>
-        <form>
-          <fieldset>
-            <div class="form-content">
-            <label for="contact-status">Select your status: </label>
-            <datalist id="contact-statuses">
-              <option>Recruiter</option>
-              <option>Student</option>
-              <option>Developer</option>
-              <option>Other</option>
-            </datalist>
-            <input list="contact-statuses" id="contact-status"/>
-            <br />
-            <label for="contact-method">Select your Preferred Contact Method:</label>
-            <select id="contact-method">
-              <optgroup label="Email">
-                <option value="work-email">Work-Email</option>
-                <option value="school-email">School Email</option>
-                <option value="personal-email">Personal Email</option>
-              </optgroup>
-              <optgroup label="Phone">
-                <option value="tel">Tel</option>
-                <option value="text">Text</option>
-              </optgroup>
-            </select>
-            <br />
-            <label for="additional-comment-area">Add any comments:</label>
-            <textarea id="additional-comment-area" placeholder="Your comment here..."></textarea>
-            <br />
-            <button type="submit">Submit</button>
-            </div>
-          </fieldset>
-        </form>
-      </section>
-
+        </div>
+        <div class="hobbies-grid">
+          <h4>HOBBIES</h4>
+          <ul>
+            <li>Working out</li>
+            <li>Watching Sports</li>
+            <li>Watching Anime</li>
+            <li>Clash of Clans</li>
+          </ul>
+        </div>
+      </div>
     </main>
 
     <footer>

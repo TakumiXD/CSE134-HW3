@@ -1,30 +1,31 @@
 :root {
-  --primary-color: white, #ffffff;
-  --secondary-color: #add8e6;
-  --tertiary-color: #8ac5f3;
-  --text-color: black, #000000;
   --box-shadow-color: rgba(0, 0, 0, 0.4);
-  --footer-background-color: black, #000000;
-  --footer-text-color: white, #ffffff;
 
+  --light-hr: gray;
+  --light-text: black;
+  --light-nav: hsl(240, 100%, 50%);
+  --light-background: white;
+
+  --dark-hr: white;
+  --dark-text: white;
+  --dark-hover-text: #add8e6;
+  --dark-background: black;
+  
   --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 * {
   padding: 0;
   margin: 0;
-  color: var(--text-color);
+  color: var(--light-text);
   font-size: 1vw;
   font-family: var(--font);
+  box-sizing: border-box;
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--light-background);
   animation: slide-in 1s;
-}
-
-header {
-  background-color: var(--secondary-color);
 }
 
 .header-container, main, footer hr {
@@ -67,18 +68,19 @@ nav ul li a {
   font-size: 1.5vw;
 }
 
+nav ul li a.current {
+  font-weight: bold;
+  color: var(--light-nav);
+}
+
 #nav-hamburger {
   display: none;
 }
 
 h1 a:hover,
 nav ul li a:hover {
-  background-color: var(--tertiary-color);
-  transition: background-color 1s ease-in-out;
-}
-
-#about {
-  padding: 2rem 1rem;
+  color: var(--light-nav);
+  transition: color 0.5s ease-in-out;
 }
 
 #about .grid-container {
@@ -93,15 +95,11 @@ nav ul li a:hover {
   margin-top: 1rem;
 }
 
-#about h3 {
+#about h2 {
   grid-area: intro;
   text-align: center;
   padding: 3rem 0;
   font-size: 3vw;
-}
-
-.grid-container h3, .grid-container .bio-grid, .grid-container .hobbies-grid {
-  box-shadow: 0 4px 12px var(--box-shadow-color);
 }
 
 #about h4 {
@@ -139,8 +137,8 @@ table tr td:nth-child(2) {
   padding-left: 1rem;
 }
 
-#portfolio, #resume, #contact {
-  padding: 1rem;
+#about, #portfolio, #resume, #contact {
+  padding: 2rem 1rem;
 }
 
 #portfolio ol {
@@ -153,6 +151,11 @@ table tr td:nth-child(2) {
 
 #resume h2, #contact h2 {
   margin-bottom: 1rem;
+}
+
+#resume iframe {
+  width: 100%;
+  height: 80vh;
 }
 
 #contact table {
@@ -173,10 +176,6 @@ form textarea {
   width: 95%;
   height: 4rem;
   padding: 2.5%;
-}
-
-footer {
-  margin-top: 2rem;
 }
 
 footer p {
