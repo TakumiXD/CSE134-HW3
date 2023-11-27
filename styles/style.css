@@ -1,30 +1,30 @@
 :root {
-  --box-shadow-color: rgba(0, 0, 0, 0.4);
+  --color-hr: gray;
+  --color-text: black;
+  --color-nav: hsl(240, 100%, 50%);
+  --color-background: white;
 
-  --light-hr: gray;
-  --light-text: black;
-  --light-nav: hsl(240, 100%, 50%);
-  --light-background: white;
-
-  --dark-hr: white;
-  --dark-text: white;
-  --dark-hover-text: #add8e6;
-  --dark-background: black;
-  
   --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.dark-mode {
+  --color-hr: white;
+  --color-text: white;
+  --color-nav: #add8e6;
+  --color-background: black;
 }
 
 * {
   padding: 0;
   margin: 0;
-  color: var(--light-text);
+  color: var(--color-text);
   font-size: 1vw;
   font-family: var(--font);
   box-sizing: border-box;
 }
 
 body {
-  background-color: var(--light-background);
+  background-color: var(--color-background);
   animation: slide-in 1s;
 }
 
@@ -58,8 +58,8 @@ h1 a {
   padding: 0.5rem 1rem;
 }
 
-nav ul li {
-  display: inline-block;
+nav ul li{
+  display: block;
 }
 
 nav ul li a {
@@ -70,29 +70,34 @@ nav ul li a {
 
 nav ul li a.current {
   font-weight: bold;
-  color: var(--light-nav);
+  color: var(--color-nav);
 }
 
 #nav-hamburger {
-  display: none;
+  display: block;
 }
 
 h1 a:hover,
 nav ul li a:hover {
-  color: var(--light-nav);
+  color: var(--color-nav);
   transition: color 0.5s ease-in-out;
 }
 
+header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+header button img {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
 #about .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas:
-    "intro intro"
-    "persona bio"
-    "hobbies hobbies";
-  align-items: center;
-  grid-gap: 1rem;
-  margin-top: 1rem;
+  display: block;
 }
 
 #about h2 {
@@ -107,10 +112,9 @@ nav ul li a:hover {
 }
 
 #about picture img {
-  grid-area: persona;
   display: block;
   max-width: 75%;
-  margin: 1em auto;
+  margin: 3rem auto;
   object-fit: cover;
   object-position: center;
 }
@@ -129,8 +133,8 @@ table tr td:nth-child(2) {
 }
 
 #about .hobbies-grid {
-  grid-area: hobbies;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 #about .hobbies-grid ul {
@@ -183,26 +187,59 @@ footer p {
   text-align: center;
 }
 
-@media only screen and (max-width: 512px) {
-  nav ul li{
-    display: block;
-
+@media only screen and (min-width: 512px) {
+  nav ul li {
+    display: inline-block;
   }
 
   #nav-hamburger {
-    display: block;
+    display: none;
   }
 
-  .grid-container {
-    display: block !important;
+  #about .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "intro intro"
+      "persona bio"
+      "hobbies hobbies";
+    align-items: center;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  #about h2 {
+    grid-area: intro;
   }
 
   #about picture img {
-    margin: 3rem auto;
+    grid-area: persona;
+    margin: 1rem auto;
+  }
+
+  #about .bio-grid {
+    grid-area: bio;
   }
 
   #about .hobbies-grid {
-    margin-top: 2rem;
+    grid-area: hobbies;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .header-container, main, footer hr {
+    width: 100%;
+    max-width: 1536px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 2048px) {
+  .header-container, main, footer hr {
+    width: 100%;
+    max-width: 2048px;
+    margin: 0 auto;
   }
 }
 
