@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/styles/style.css">
     <title>Takumi's Portfolio Site</title>
+    <style>
+      label::after {
+        content: "*";
+        color: red;
+        margin-left: 4px;
+      }
+
+      input:valid, textarea:valid {
+        border: 1px solid green !important;
+      }
+
+      input:user-invalid, textarea:invalid {
+        border: 1px solid red !important;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -59,7 +74,7 @@
         <output for="email" id="emailError"></output>
         <output for="email" id="emailInfo"></output>
         <label for="comments">Comments:</label>
-        <textarea id="comments" name="comments" placeholder="Your comments here..." maxlength="1000" pattern="^[\x20-\x7E]+$" required></textarea>
+        <textarea id="comments" name="comments" placeholder="Your comments here..." maxlength="1000" pattern="^[A-Za-z0-9.,!?\s]+$" required></textarea>
         <output for="comments" id="commentsError"></output>  
         <output for="comments" id="commentsInfo"></output>       
         <input type="hidden" id="possible_bot" name="possible_bot" value="true">
@@ -73,6 +88,5 @@
     </footer>
 
     <script src="/scripts/script.js"></script>
-    <script src="/scripts/form.js"></script>
   </body>
 </html>
