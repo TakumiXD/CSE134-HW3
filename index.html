@@ -2,31 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/styles/style.css">
-
     <title>Takumi's Portfolio Site</title>
   </head>
   <body>
     <header>
       <div class="header-container">
-        <h1><a href="#">Takumi Sugita</a></h1>
-        <button id="theme-toggler">
-          <img src="/assets/light-mode.png" id="theme-img"/>
-        </button>
         <nav>
+          <input type="checkbox" id="check"/>
+          <label for="check" id="hamburger">
+            <img src="/assets/hamburger.png" id="hamburger-img"/>
+          </label>
+          <h1><a href="/index.html">Takumi Sugita</a></h1>
           <ul>
             <li><a href="/index.html" class="current">About</a></li>
             <li><a href="/portfolio.html">Portfolio</a></li>
             <li><a href="/resume.html">Resume</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
+          <button id="theme-toggler">
+            <span>
+              <img src="/assets/light-mode.png" id="theme-img"/>
+            </span>
+          </button>
         </nav>
-        <svg id="nav-hamburger" viewBox="0 0 100 80" width="40" height="10">
-          <rect width="100" height="10"></rect>
-          <rect y="30" width="100" height="10"></rect>
-          <rect y="60" width="100" height="10"></rect>
-        </svg>
       </div>
       <hr/>
     </header>
