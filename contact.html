@@ -51,7 +51,7 @@
       <form action="https://httpbin.org/post" method="post">
         <h2>Get in Touch</h2>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your name here" required>
+        <input type="text" id="name" name="name" placeholder="Your name here" required pattern="[a-zA-z0-9$]+">
         <output for="name" id="nameError"></output>
         <output for="name" id="nameInfo"></output>
         <label for="email">Email:</label>

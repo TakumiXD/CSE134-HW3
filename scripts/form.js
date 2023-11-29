@@ -3,12 +3,41 @@ const intMaxLength = comments.maxLength;
 const intWarningLength = Math.floor(intMaxLength / 10);
 const intErrorLength = Math.floor(intMaxLength / 20);
 
-const commentsInfo = document.querySelector("#commentsInfo");
-const commentsError = document.querySelector("#commentsError");
+const commentsInfo = document.getElementById("commentsInfo");
+const commentsError = document.getElementById("commentsError");
 commentsInfo.style.display = "block";
 commentsInfo.textContent = "Number of characters left: " + intMaxLength;
 
 let previousInput = "";
+
+const form = document.querySelector("#contact form");
+const username = document.getElementById("name");
+const email = document.getElementById("email");
+function validateName() {
+  if (username.checkValidity()) {
+    return true;
+  }
+  else {
+    username.setCustomValidity("Username can only contain letters and numbers.");
+    return false;
+  }
+}
+
+function validateEmail() {
+  if (email.checkValidity()) {
+    return true;
+  }
+  else {
+    username.setCustomValidity("Please enter a valid email");
+    return false;
+  }
+}
+
+form.addEventListener("submit", (event) => {
+  if ((!validateName()) || (!validateEmail())) {
+    event.preventDefault();
+  }
+});
 
 const formErrors = document.getElementById("form_errors");
 function addFormError(strError) {
