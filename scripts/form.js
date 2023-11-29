@@ -6,12 +6,18 @@ const intErrorLength = Math.floor(intMaxLength / 20);
 const commentsInfo = document.querySelector("#commentsInfo");
 const commentsError = document.querySelector("#commentsError");
 commentsInfo.style.display = "block";
-
 commentsInfo.textContent = "Number of characters left: " + intMaxLength;
 
 let previousInput = "";
 
-function updateCounter() {
+const formErrors = document.getElementById("form_errors");
+function addFormError(strError) {
+  let oldArray = JSON.parse(formErrors.value);
+  oldArray.push(strError);
+  formErrors.value = JSON.stringify(oldArray);
+}
+
+function showInfoAndError() {
   commentsInfo.textContent = "";
   commentsError.textContent = "";
 
@@ -19,12 +25,12 @@ function updateCounter() {
   let pattern = /^[\x20-\x7E\s]*$/;
 
   if (!pattern.test(inputValue)) {
-    console.log("here");
     comments.value = previousInput;
+    commentsError.textContent = "Error: illegal character typed";
+    addFormError("Error: illegal character typed");
     return;
   }
   else {
-    console.log(this.value);
     previousInput = this.value;
   }
 
@@ -40,7 +46,8 @@ function updateCounter() {
   }
   else {
     commentsError.textContent = "Number of characters left: " + intRemainLength;
+    addFormError("Number of characters left: " + intRemainLength);
   }
 }
 
-comments.addEventListener("input", updateCounter); 
+comments.addEventListener("input", showInfoAndError); 
